@@ -22,9 +22,6 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
-# Call the MiuiCamera setup
-$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/miuicamera.mk)
-
 # Camera
 PRODUCT_PACKAGES += \
     libpiex_shim
@@ -57,6 +54,9 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Inherit Private Keys
+-include vendor/lineage-priv/keys/keys.mk
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/munch/munch-vendor.mk)
