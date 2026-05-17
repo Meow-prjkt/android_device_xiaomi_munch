@@ -40,7 +40,7 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'\x9A\x0A\x00\x94', b'\x1F\x20\x03\xD5'),
     'vendor/lib/libaudioroute_ext.so': blob_fixup()
         .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
-    'vendor/lib/hw/audio.primary.kona.so': blob_fixup()
+    'vendor/lib/hw/audio.primary.munch.so': blob_fixup()
         .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
 }  # fmt: skip
 
